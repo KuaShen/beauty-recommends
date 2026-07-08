@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cream-100 text-[#4A3F44] font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    @apply bg-rose-200 text-rose-900;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/40 rounded-2xl shadow-soft;
+  }
+  
+  .glass-card-solid {
+    @apply bg-white/90 backdrop-blur-md border border-white/60 rounded-2xl shadow-soft;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 
+           bg-gradient-to-r from-rose-400 to-lavender-400 
+           text-white font-medium rounded-xl
+           hover:from-rose-500 hover:to-lavender-500 
+           active:scale-[0.98] transition-all duration-200
+           shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-white/80 border border-rose-200 text-rose-700 font-medium rounded-xl
+           hover:bg-rose-50 hover:border-rose-300
+           active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           text-[#4A3F44] font-medium rounded-xl
+           hover:bg-rose-50/60
+           active:scale-[0.98] transition-all duration-200;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 
+           bg-lavender-100 text-lavender-700 text-xs font-medium rounded-full;
+  }
+
+  .tag-rose {
+    @apply inline-flex items-center px-3 py-1 
+           bg-rose-100 text-rose-700 text-xs font-medium rounded-full;
+  }
+
+  .tag-gold {
+    @apply inline-flex items-center px-3 py-1 
+           bg-gold-100 text-gold-700 text-xs font-medium rounded-full;
+  }
+
+  .section-title {
+    @apply font-serif text-2xl md:text-3xl font-semibold text-[#4A3F44] mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-[#8A7E84] text-sm md:text-base mb-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

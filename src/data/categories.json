@@ -1,0 +1,37 @@
+[
+  {
+    "id": "skincare",
+    "name": "护肤",
+    "icon": "droplets",
+    "description": "精华、面霜、面膜、洁面等基础护肤",
+    "color": "rose"
+  },
+  {
+    "id": "makeup",
+    "name": "彩妆",
+    "icon": "palette",
+    "description": "粉底、口红、眼影、腮红等",
+    "color": "lavender"
+  },
+  {
+    "id": "sunscreen",
+    "name": "防晒",
+    "icon": "sun",
+    "description": "防晒霜、隔离、喷雾等",
+    "color": "gold"
+  },
+  {
+    "id": "body",
+    "name": "身体护理",
+    "icon": "sparkles",
+    "description": "身体乳、护手霜、沐浴露等",
+    "color": "rose"
+  },
+  {
+    "id": "fragrance",
+    "name": "香水",
+    "icon": "flower-2",
+    "description": "淡香水、浓香水、香氛等",
+    "color": "lavender"
+  }
+]

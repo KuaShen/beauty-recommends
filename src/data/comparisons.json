@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "top-essence-comparison",
+    "title": "热门精华大横评",
+    "subtitle": "兰蔻小黑瓶 vs 雅诗兰黛小棕瓶 vs 娇韵诗双萃 vs 资生堂红腰子",
+    "coverImage": "/images/banners/essence-comparison.jpg",
+    "productIds": ["lancome-advanced-genifique", "este-lauder-advanced-night-repair", "clarins-double-serum", "shiseido-ultimune"],
+    "dimensions": [
+      { "label": "价格", "key": "price", "description": "官方参考价（30ml）" },
+      { "label": "保湿力", "key": "hydration", "description": "使用后肌肤水分提升程度" },
+      { "label": "修护力", "key": "repair", "description": "对肌肤屏障的修护能力" },
+      { "label": "抗老效果", "key": "antiaging", "description": "淡化细纹、紧致效果" },
+      { "label": "吸收速度", "key": "absorption", "description": "质地吸收快慢" },
+      { "label": "温和度", "key": "gentleness", "description": "对敏感肌的友好程度" },
+      { "label": "性价比", "key": "value", "description": "价格与效果的比值" }
+    ],
+    "scores": {
+      "lancome-advanced-genifique": { "price": 3, "hydration": 4, "repair": 5, "antiaging": 4, "absorption": 5, "gentleness": 5, "value": 3 },
+      "este-lauder-advanced-night-repair": { "price": 3, "hydration": 4, "repair": 5, "antiaging": 5, "absorption": 4, "gentleness": 4, "value": 3 },
+      "clarins-double-serum": { "price": 4, "hydration": 5, "repair": 4, "antiaging": 5, "absorption": 3, "gentleness": 4, "value": 4 },
+      "shiseido-ultimune": { "price": 4, "hydration": 4, "repair": 3, "antiaging": 3, "absorption": 5, "gentleness": 5, "value": 5 }
+    },
+    "summary": "如果你是敏感肌或追求维稳，首选**兰蔻小黑瓶**或**资生堂红腰子**，吸收快不刺激；如果追求抗老修护，**雅诗兰黛小棕瓶**和**娇韵诗双萃**更胜一筹；干皮更推荐娇韵诗双萃，油皮更推荐兰蔻小黑瓶。综合性价比最高的是资生堂红腰子。",
+    "winner": "lancome-advanced-genifique"
+  },
+  {
+    "slug": "lipstick-classic-comparison",
+    "title": "经典口红三巨头对比",
+    "subtitle": "迪奥#999 vs 阿玛尼#405 vs YSL#21",
+    "coverImage": "/images/banners/lipstick-comparison.jpg",
+    "productIds": ["dior-999-lipstick", "armani-lip-maestro", "ysl-rouge-pur-couture"],
+    "dimensions": [
+      { "label": "价格", "key": "price", "description": "官方参考价" },
+      { "label": "显色度", "key": "pigmentation", "description": "一笔上色饱和度" },
+      { "label": "持久度", "key": "longevity", "description": "持色时间" },
+      { "label": "滋润度", "key": "moisture", "description": "上唇滋润不拔干" },
+      { "label": "显白效果", "key": "whitening", "description": "对肤色的提亮效果" },
+      { "label": "日常实用度", "key": "daily", "description": "日常使用的便利性和搭配度" }
+    ],
+    "scores": {
+      "dior-999-lipstick": { "price": 4, "pigmentation": 5, "longevity": 4, "moisture": 4, "whitening": 5, "daily": 4 },
+      "armani-lip-maestro": { "price": 4, "pigmentation": 5, "longevity": 5, "moisture": 3, "whitening": 5, "daily": 5 },
+      "ysl-rouge-pur-couture": { "price": 4, "pigmentation": 4, "longevity": 4, "moisture": 3, "whitening": 4, "daily": 3 }
+    },
+    "summary": "如果你只能拥有一支口红，**迪奥#999**是最安全的选择——不挑场合、不挑妆容、气场与日常兼备。**阿玛尼#405**烂番茄色更适合追求时髦感的女生，显白效果一流。**YSL#21**复古正红适合搭配精致妆容，日常使用率略低于前两者。",
+    "winner": "dior-999-lipstick"
+  },
+  {
+    "slug": "sunscreen-comparison",
+    "title": "热门防晒霜对比评测",
+    "subtitle": "安耐晒金瓶 vs 兰蔻小白管 vs 怡丽丝尔小金管",
+    "coverImage": "/images/banners/sunscreen-comparison.jpg",
+    "productIds": ["aneesa-gold-sunscreen", "lancome-uv-expert", "elixir-sunscreen"],
+    "dimensions": [
+      { "label": "价格", "key": "price", "description": "官方参考价" },
+      { "label": "防晒力", "key": "protection", "description": "防晒指数与实际防护效果" },
+      { "label": "肤感", "key": "texture", "description": "涂抹后的舒适度和清爽度" },
+      { "label": "防水性", "key": "waterproof", "description": "防水防汗能力" },
+      { "label": "日常通勤", "key": "daily", "description": "适合日常使用的程度" },
+      { "label": "户外适用", "key": "outdoor", "description": "适合户外活动和高强度日晒" }
+    ],
+    "scores": {
+      "aneesa-gold-sunscreen": { "price": 5, "protection": 5, "texture": 4, "waterproof": 5, "daily": 3, "outdoor": 5 },
+      "lancome-uv-expert": { "price": 3, "protection": 5, "texture": 5, "waterproof": 3, "daily": 5, "outdoor": 3 },
+      "elixir-sunscreen": { "price": 4, "protection": 4, "texture": 4, "waterproof": 3, "daily": 5, "outdoor": 2 }
+    },
+    "summary": "不同场景各有所长：**安耐晒金瓶**是户外和海边的不二之选，防水力最强；**兰蔻小白管**日常通勤体验最好，肤感轻盈似乳液，还能养肤；**怡丽丝尔**是性价比之选，乳液防晒二合一适合懒人。建议日常+户外各备一支。",
+    "winner": "aneesa-gold-sunscreen"
+  }
+]
