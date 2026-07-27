@@ -1,0 +1,110 @@
+{
+  "兰蔻": {
+    "color": "#BE2C4D",
+    "gradient": "linear-gradient(135deg, #BE2C4D 0%, #F5C6C6 100%)",
+    "icon": "🌹",
+    "enName": "Lancôme"
+  },
+  "雅诗兰黛": {
+    "color": "#1A1A2E",
+    "gradient": "linear-gradient(135deg, #1A1A2E 0%, #8B8B9E 100%)",
+    "icon": "✨",
+    "enName": "Estée Lauder"
+  },
+  "SK-II": {
+    "color": "#8B1A1A",
+    "gradient": "linear-gradient(135deg, #8B1A1A 0%, #D4A0A0 100%)",
+    "icon": "🌸",
+    "enName": "SK-II"
+  },
+  "赫莲娜": {
+    "color": "#1A1A1A",
+    "gradient": "linear-gradient(135deg, #1A1A1A 0%, #5C5C5C 100%)",
+    "icon": "⚫",
+    "enName": "Helena Rubinstein"
+  },
+  "科颜氏": {
+    "color": "#1B4D3D",
+    "gradient": "linear-gradient(135deg, #1B4D3D 0%, #99C2A2 100%)",
+    "icon": "🌿",
+    "enName": "Kiehl's"
+  },
+  "资生堂": {
+    "color": "#CC2A4B",
+    "gradient": "linear-gradient(135deg, #CC2A4B 0%, #F5B7C1 100%)",
+    "icon": "🔴",
+    "enName": "Shiseido"
+  },
+  "娇韵诗": {
+    "color": "#2D6B5E",
+    "gradient": "linear-gradient(135deg, #2D6B5E 0%, #A8D5BA 100%)",
+    "icon": "🌱",
+    "enName": "Clarins"
+  },
+  "阿玛尼": {
+    "color": "#2A2A2A",
+    "gradient": "linear-gradient(135deg, #2A2A2A 0%, #6B6B6B 100%)",
+    "icon": "💋",
+    "enName": "Giorgio Armani"
+  },
+  "迪奥": {
+    "color": "#C41E3A",
+    "gradient": "linear-gradient(135deg, #C41E3A 0%, #FFD1DC 100%)",
+    "icon": "💄",
+    "enName": "Dior"
+  },
+  "YSL": {
+    "color": "#1A1A2E",
+    "gradient": "linear-gradient(135deg, #1A1A2E 0%, #C9A96E 100%)",
+    "icon": "✨",
+    "enName": "Yves Saint Laurent"
+  },
+  "纪梵希": {
+    "color": "#1A1A1A",
+    "gradient": "linear-gradient(135deg, #1A1A1A 0%, #808080 100%)",
+    "icon": "◇",
+    "enName": "Givenchy"
+  },
+  "NARS": {
+    "color": "#1A1A1A",
+    "gradient": "linear-gradient(135deg, #1A1A1A 0%, #FF6B6B 100%)",
+    "icon": "🖤",
+    "enName": "NARS"
+  },
+  "TOM FORD": {
+    "color": "#2C1810",
+    "gradient": "linear-gradient(135deg, #2C1810 0%, #C9A96E 100%)",
+    "icon": "⭐",
+    "enName": "TOM FORD"
+  },
+  "安耐晒": {
+    "color": "#D4A017",
+    "gradient": "linear-gradient(135deg, #D4A017 0%, #FFF3CD 100%)",
+    "icon": "☀️",
+    "enName": "Anessa"
+  },
+  "怡丽丝尔": {
+    "color": "#C9A96E",
+    "gradient": "linear-gradient(135deg, #C9A96E 0%, #FFF8F0 100%)",
+    "icon": "✨",
+    "enName": "Elixir"
+  },
+  "香奈儿": {
+    "color": "#1A1A1A",
+    "gradient": "linear-gradient(135deg, #1A1A1A 0%, #FFFFFF 100%)",
+    "icon": "🌸",
+    "enName": "Chanel"
+  },
+  "祖玛珑": {
+    "color": "#6B8E7B",
+    "gradient": "linear-gradient(135deg, #6B8E7B 0%, #D4E8D4 100%)",
+    "icon": "💐",
+    "enName": "Jo Malone"
+  },
+  "欧舒丹": {
+    "color": "#F5C6A0",
+    "gradient": "linear-gradient(135deg, #F5C6A0 0%, #FFF8F0 100%)",
+    "icon": "🧴",
+    "enName": "L'Occitane"
+  }
+}

@@ -2,10 +2,10 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, ShoppingBag, BarChart3, Check, X, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, BarChart3, Check, AlertTriangle } from 'lucide-react';
 import Rating from '@/components/ui/Rating';
 import Badge from '@/components/ui/Badge';
-import Card from '@/components/ui/Card';
+import ProductImage from '@/components/features/ProductImage';
 import AffiliateLinks from '@/components/features/AffiliateLinks';
 import { getProductById } from '@/lib/filters';
 import { formatPrice } from '@/lib/utils';
@@ -60,13 +60,16 @@ export default function ProductDetailPage() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8">
         {/* Product Image */}
         <div className="lg:col-span-2">
-          <div className="glass-card aspect-square flex items-center justify-center bg-gradient-rose overflow-hidden">
-            <div className="text-center p-8">
-              <div className="w-20 h-20 mx-auto rounded-full bg-white/60 backdrop-blur flex items-center justify-center mb-3">
-                <ShoppingBag className="w-9 h-9 text-rose-400" />
-              </div>
-              <p className="text-xs text-[#8A7E84] font-medium">{product.brandEn || product.brand}</p>
-              <p className="text-sm text-[#4A3F44] font-medium mt-1">{product.name}</p>
+          <div className="glass-card overflow-hidden">
+            <ProductImage
+              brand={product.brand}
+              name={product.name}
+              category={product.category}
+              className="w-full aspect-square"
+            />
+            <div className="p-4 text-center border-t border-rose-100/30">
+              <p className="font-serif text-sm font-semibold text-[#4A3F44]">{product.name}</p>
+              <p className="text-xs text-[#8A7E84] mt-0.5">{product.brand}</p>
             </div>
           </div>
         </div>
@@ -81,7 +84,7 @@ export default function ProductDetailPage() {
                 <Badge key={tag} variant="default">{tag}</Badge>
               ))}
             </div>
-            <p className="text-xs text-[#8A7E84] font-medium mb-1">{product.brandEn || product.brand}</p>
+            <p className="text-xs text-[#8A7E84] font-medium mb-1">{product.brand}</p>
             <h1 className="font-serif text-2xl md:text-3xl font-bold text-[#4A3F44] leading-tight">
               {product.name}
             </h1>
@@ -90,7 +93,7 @@ export default function ProductDetailPage() {
               <span className="font-serif text-2xl font-bold text-rose-600">
                 {formatPrice(product.price)}
               </span>
-              <span className="text-xs text-[#8A7E84]">起</span>
+              <span className="text-xs text-[#8A7E84]">参考价</span>
             </div>
           </div>
 
@@ -117,7 +120,7 @@ export default function ProductDetailPage() {
           {product.suitableFor.length > 0 && (
             <div className="glass-card p-4 md:p-5 space-y-3">
               <div>
-                <h4 className="text-xs font-medium text-[#8A7E84] mb-2">✅ 适合肤质</h4>
+                <h4 className="text-xs font-medium text-[#8A7E84] mb-2">✨ 适合肤质</h4>
                 <div className="flex flex-wrap gap-2">
                   {product.suitableFor.map(s => (
                     <Badge key={s} variant="rose">{s}</Badge>
@@ -138,14 +141,16 @@ export default function ProductDetailPage() {
           )}
 
           {/* Ingredients */}
-          <div>
-            <h3 className="font-serif font-semibold text-[#4A3F44] mb-2">核心成分</h3>
-            <div className="flex flex-wrap gap-2">
-              {product.ingredients.map((ing, i) => (
-                <Badge key={i} variant="gold">{ing}</Badge>
-              ))}
+          {product.ingredients.length > 0 && (
+            <div>
+              <h3 className="font-serif font-semibold text-[#4A3F44] mb-2">核心成分</h3>
+              <div className="flex flex-wrap gap-2">
+                {product.ingredients.map((ing, i) => (
+                  <Badge key={i} variant="gold">{ing}</Badge>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Usage */}
           {product.usage && (
@@ -158,7 +163,7 @@ export default function ProductDetailPage() {
       </div>
 
       {/* Affiliate Links */}
-      <div className="mt-8 md:mt-12 max-w-lg">
+      <div className="mt-8 md:mt-12">
         <AffiliateLinks links={product.affiliateLinks} productName={product.name} />
       </div>
 

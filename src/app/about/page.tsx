@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { Heart, Shield, ExternalLink, Sparkles } from 'lucide-react';
+import { Heart, Shield, ExternalLink, Sparkles, ShoppingCart, ExternalLink as LinkIcon } from 'lucide-react';
+import { affiliatePlatforms } from '@/lib/affiliate';
+
+const platforms = Object.values(affiliatePlatforms);
 
 export default function AboutPage() {
   return (
@@ -35,24 +38,72 @@ export default function AboutPage() {
           </div>
           <p className="text-sm text-[#8A7E84] leading-relaxed mb-4">
             本网站通过电商联盟推广（CPS）获得收入。当您点击我们提供的购买链接并完成购买后，
-            电商平台会向我們支付一定比例的佣金。这不会影响您的购买价格。
+            电商平台会向我们支付一定比例的佣金。这不会影响您的购买价格。
           </p>
           <div className="bg-cream-100 rounded-xl p-4">
-            <h4 className="text-xs font-medium text-[#4A3F44] mb-2">佣金来源（示例）</h4>
-            <ul className="space-y-2">
-              <li className="flex items-center justify-between text-xs">
-                <span className="text-[#8A7E84]">淘宝 / 天猫（阿里妈妈·淘宝客）</span>
-                <span className="text-[#4A3F44] font-medium">5% – 30%</span>
-              </li>
-              <li className="flex items-center justify-between text-xs">
-                <span className="text-[#8A7E84]">京东（京东联盟）</span>
-                <span className="text-[#4A3F44] font-medium">3% – 15%</span>
-              </li>
-              <li className="flex items-center justify-between text-xs">
-                <span className="text-[#8A7E84]">拼多多（多多进宝）</span>
-                <span className="text-[#4A3F44] font-medium">1% – 10%</span>
-              </li>
-            </ul>
+            <h4 className="text-xs font-medium text-[#4A3F44] mb-2">佣金来源</h4>
+            <div className="space-y-2">
+              {platforms.map(p => (
+                <div key={p.id} className="flex items-center justify-between text-xs">
+                  <span className="text-[#8A7E84]">{p.icon} {p.name}</span>
+                  <span className="text-[#4A3F44] font-medium">{p.commissionRate}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Affiliate Setup Guide */}
+        <div className="glass-card p-6 md:p-8 border border-rose-200/60">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center">
+              <ShoppingCart className="w-5 h-5 text-rose-500" />
+            </div>
+            <div>
+              <h2 className="font-serif font-semibold text-lg text-[#4A3F44]">站长专区：接入带货联盟</h2>
+              <p className="text-xs text-[#8A7E84]">通过以下平台注册推广账号，获取真实佣金链接</p>
+            </div>
+          </div>
+          
+          <div className="space-y-4">
+            {platforms.map(p => (
+              <details key={p.id} className="group">
+                <summary className="flex items-center justify-between p-3 rounded-xl bg-white/60 hover:bg-rose-50/30 cursor-pointer transition-colors">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{p.icon}</span>
+                    <div>
+                      <span className="text-sm font-medium text-[#4A3F44]">{p.name}</span>
+                      <span className="text-xs text-[#8A7E84] ml-1">佣金 {p.commissionRate}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-xs text-rose-500">
+                    展开步骤
+                    <span className="transition-transform group-open:rotate-180">▼</span>
+                  </div>
+                </summary>
+                <div className="mt-3 pl-3 space-y-2">
+                  <ol className="space-y-2">
+                    {p.setupGuide.map((step, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs text-[#6B5E64]">
+                        <span className="w-5 h-5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 text-[10px] font-medium">
+                          {i + 1}
+                        </span>
+                        {step}
+                      </li>
+                    ))}
+                  </ol>
+                  <a
+                    href={p.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-2 text-xs text-rose-600 font-medium hover:underline"
+                  >
+                    前往 {p.name} 联盟注册
+                    <LinkIcon className="w-3 h-3" />
+                  </a>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
 
@@ -66,19 +117,19 @@ export default function AboutPage() {
           </div>
           <ul className="space-y-3 text-sm text-[#8A7E84]">
             <li className="flex items-start gap-2">
-              <span className="text-rose-400 mt-0.5">①</span>
+              <span className="text-rose-400 mt-0.5 font-serif font-bold">①</span>
               <span><strong className="text-[#4A3F44]">真实体验优先</strong> — 所有产品评测基于实际使用感受和成分分析，不接受付费推广影响结论。</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-rose-400 mt-0.5">②</span>
+              <span className="text-rose-400 mt-0.5 font-serif font-bold">②</span>
               <span><strong className="text-[#4A3F44]">透明佣金披露</strong> — 所有推广链接均明确标注，佣金比例公开透明。</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-rose-400 mt-0.5">③</span>
+              <span className="text-rose-400 mt-0.5 font-serif font-bold">③</span>
               <span><strong className="text-[#4A3F44]">用户立场不变</strong> — 推荐结论不受佣金比例影响。高佣产品不一定会被推荐，低佣产品也不会被忽略。</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-rose-400 mt-0.5">④</span>
+              <span className="text-rose-400 mt-0.5 font-serif font-bold">④</span>
               <span><strong className="text-[#4A3F44]">持续更新</strong> — 产品数据和评测内容定期更新，确保信息时效性。</span>
             </li>
           </ul>
